@@ -1,0 +1,213 @@
+/* Importação de fonte do Google Fonts e reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Habilita a rolagem suave ao clicar em links internos */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo base para o corpo do documento */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container principal para centralizar o conteúdo */
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Estilização do Cabeçalho e Navegação */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky; /* Mantém o menu fixo no topo */
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header nav {
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo span {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #00aaff; /* Cor de destaque ao passar o mouse */
+}
+
+/* Estilo Padrão para as Seções */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Estilo para a seção de Formação (grid de cards) */
+.formacao-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 20px;
+}
+
+/* Estilo para os cards em geral */
+.card, .card-experiencia {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover, .card-experiencia:hover {
+    transform: translateY(-5px); /* Efeito de elevação */
+}
+
+.card h3, .card-experiencia h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    border-left: 3px solid #00aaff;
+    padding-left: 10px;
+}
+
+/* Estilo específico para Portfólio/Experiência */
+.portfolio-info {
+    text-align: center;
+    margin-bottom: 30px;
+    font-style: italic;
+    color: #555;
+}
+
+.card-experiencia {
+    margin-bottom: 20px;
+}
+
+.card-experiencia .empresa {
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Estilo do Formulário de Contato */
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Estilo do Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para Responsividade */
+@media(max-width: 768px) {
+    .formacao-grid {
+        grid-template-columns: 1fr; /* Coluna única em telas menores */
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    header ul {
+        margin-top: 15px;
+    }
+}
